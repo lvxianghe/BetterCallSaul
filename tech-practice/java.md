@@ -71,6 +71,8 @@
 
 - 对Integer.MIN_VALUE进行 abs会越界，所以先转long，再abs，降低概率
 
+- long超过17位数前端numeric接收有缺失精度问题，可以全局拦截tostring
+
 - 集合容器要求元素必须是Object，所以需要包装类
 
 - 自动装箱：Integer a = 10；原理是 Integer a = Integer.valuesOf(10)；其他一样的 xxx.valueOf()
